@@ -1,15 +1,24 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  padding: 16px 0;
+  padding: 10px 20px 20px;
+  margin: 0px 20px;
+  display: flex;
+  box-shadow: rgb(0 0 0 / 10%) 0px 16px 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 420px;
 `
 
 export const Input = styled.input`
-  border: 1px solid #ccc;
+  border: none;
+  border-bottom: 1px solid rgb(191, 59, 153);
   border-radius: 3px;
   margin-bottom: 8px;
   padding: 8px 4px;
   display: block;
+  outline: none;
   width: 100%;
   &[disabled] {
     opacity: .3;
@@ -23,6 +32,7 @@ export const Button = styled.button`
   height: 32px;
   display: block;
   width: 100%;
+  cursor: pointer;
   text-align: center;
   &[disabled] {
     opacity: .3;
@@ -30,9 +40,11 @@ export const Button = styled.button`
 `
 
 export const Title = styled.h2`
-  font-size: 16px;
+  font-size: 2.2rem;
   font-weight: 500;
+  line-height: 3.2rem;
   padding: 8px 0;
+  color: rgb(191, 59, 153);
 ` 
 
 export const Error = styled.span`
@@ -78,4 +90,10 @@ export const Spinner = styled.div`
   border-left-color: #09f;
   margin:auto;
   animation: spin 1s ease infinite;
+`;
+
+export const Div = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 `;

@@ -17,6 +17,7 @@ const Favs = lazy(() => import('../pages/Favs'));
 const User = lazy(() => import('../pages/User'));
 const Detail = lazy(() => import('../pages/Detail'));
 const NotRegisteredUser = lazy(() => import('../pages/NotRegisteredUser'));
+const Register = lazy(() => import('../pages/Registrarse'));
 
 const App = () => {
     const initialState = useInitialState();
@@ -32,6 +33,7 @@ const App = () => {
                             <Route exact path='/detail/:detailId' component={Detail}/>
 
                             {!isAuth && <Route exact component={NotRegisteredUser} path="/login" />}
+                            {!isAuth && <Route exact component={Register} path="/sign-up"/>}
                             {!isAuth && <Redirect from="/favs" to="/login" />}
                             {!isAuth && <Redirect from="/user" to="/login" />}
                             {isAuth && <Redirect from="/login" to="/" />}

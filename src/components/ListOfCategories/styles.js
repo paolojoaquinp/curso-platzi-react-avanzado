@@ -3,6 +3,9 @@ import { bounceDown } from '../../styles/animation';
 
 export const List = styled.ul`
     overflow: scroll;
+    overflow-y: hidden;
+    margin: 10px 0;
+    padding: 5px 0;
     width: 100%;
     display: flex;
     ${(props) => {
@@ -16,6 +19,7 @@ export const List = styled.ul`
                     left: 0;
                     margin: 0 auto;
                     max-width: 400px;
+                    overflow-x:hidden;
                     padding: 5px;
                     position: fixed;
                     right: 0;
@@ -26,9 +30,31 @@ export const List = styled.ul`
             `;
         }
     } }
+    /* width */
     &::-webkit-scrollbar {
-        display: none;
+        width: 1px;
     }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #ccc; 
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: grey; 
+    }
+
+    /* &::-webkit-scrollbar {
+        display: none;
+    } */
 `;
 
 export const Item = styled.li`

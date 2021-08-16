@@ -6,7 +6,7 @@ import LayoutTemplate from '../components/LayoutTemplate';
 const HomePage = (props) => {
     const { id } = props.match.params;
     return (
-        <LayoutTemplate title="Tu app de fotos de mascotas" subtitle="Con Petgram puedes encontrar fotos de animales domésticos muy bonitos">
+        <LayoutTemplate home={true} title="Tu app de fotos de mascotas" subtitle="Con Petgram puedes encontrar fotos de animales domésticos muy bonitos">
             <ListOfCategories />
             <ListOfPhotoCards categoryId={id}/>
         </LayoutTemplate>

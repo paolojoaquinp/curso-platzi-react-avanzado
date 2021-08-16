@@ -8,7 +8,7 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 420px;
+  height: 480px;
 `
 
 export const Input = styled.input`
